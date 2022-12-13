@@ -1,10 +1,8 @@
 .signup-all-div {
-    border: 1px solid green;
     height: 200px;
     width: 300px;
     margin: 0 auto;
     .signup-id-div {
-        border: 1px solid red;
         display: flex;
         flex-direction: row;
         float: left;
@@ -15,7 +13,6 @@
         }
     }
     .signup-pw-div {
-        border: 1px solid blue;
         display: flex;
         flex-direction: row;
         float: left;

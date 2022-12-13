@@ -1,0 +1,12 @@
+.todo-div {
+    display:inline-flex;
+    .todo-input-div {
+        margin-left: 15px;
+        input {
+            width: 200px;
+        }
+    }
+}
+button {
+    margin-left: 10px;
+}
