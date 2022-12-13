@@ -1,0 +1,34 @@
+.signup-all-div {
+    border: 1px solid green;
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    .signup-id-div {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: row;
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        .signup-id-input-div {
+            margin-left: 25px;
+        }
+    }
+    .signup-pw-div {
+        border: 1px solid blue;
+        display: flex;
+        flex-direction: row;
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+        .signup-pw-input-div {
+            margin-left: 11px;
+        }
+    }
+    input {
+        width: 220px;
+    }
+    button {
+        margin-top: 20px;
+    }
+}

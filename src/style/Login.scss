@@ -1,0 +1,29 @@
+.login-all-div {
+    border: 1px solid black;
+    height: 100px;
+    width: 300px;
+    margin: 0 auto;
+    .login-id-div, .login-pw-div {
+        border: 1px solid red;
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        .login-label-div {
+            margin-right: 10px;
+            text-align: left;
+        }
+        .login-input-id-div {
+            margin-left: 14px;
+        }
+        input {
+            width: 210px;
+        }
+    }
+    .login-btn-div {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid blue;
+    }
+}
