@@ -7,6 +7,10 @@ import { PrivateRoute } from './layout/PrivateRoute';
 import { PublicRoute } from './layout/PublicRoute';
 
 function App() {
+  //브라우저 종료시 로컬스토리지 초기화
+  window.addEventListener("unload", () => {
+    localStorage.removeItem('token');
+  })
   return (
     <div className="App">
       <BrowserRouter>

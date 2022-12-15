@@ -18,8 +18,13 @@ export const Todo = () => {
 
     //함수 정의
     useEffect(() => {
+        let getToken = localStorage.getItem('token');
+        let getHeaders = {
+            "Content-Type" : "application/json",
+            "Authorization" : `Bearer ${getToken}`
+        }
         axios.get(url,
-        {headers})
+        {headers : getHeaders})
         .then(res => {
             setTodos(res.data);
             todoRef.current.value = "";
