@@ -10,11 +10,11 @@ export const Header = () => {
 
     //헤더 제목 정의
     let title = null;
-    if(location.pathname == "/") {
+    if(location.pathname === "/") {
         title = "Todo Login";
-    } else if(location.pathname == "/signup") {
+    } else if(location.pathname === "/signup") {
         title = "Todo Signup";
-    } else if(location.pathname == "/todo") {
+    } else if(location.pathname === "/todo") {
         title = "Todo";
     }
 
