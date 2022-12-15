@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom"
-import classes from "../style/Signup.scss";
+import {} from "../style/Signup.scss";
 import axios from 'axios';
 import { emailCheck } from "../util/emailCheck";
 

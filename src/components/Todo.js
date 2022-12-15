@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import classes from "../style/Todo.scss";
+import {} from "../style/Todo.scss";
 import axios from 'axios';
 
 export const Todo = () => {

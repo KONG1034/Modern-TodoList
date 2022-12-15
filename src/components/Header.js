@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
-import {classes} from '../style/Header.scss';
+import {} from '../style/Header.scss';
 
 export const Header = () => {
     //변수 정의
     const location = useLocation();
     const navigate = useNavigate();
-    const [checkToken, setCheckToken] = useState(false);
+    const token = localStorage.getItem("token");
+    let checkToken = useRef(false);
 
     //헤더 제목 정의
     let title = null;
@@ -19,21 +20,21 @@ export const Header = () => {
     }
 
     useEffect(() => {
-        if(localStorage.getItem('token')) {
-            setCheckToken(!checkToken);
+        if(token) {
+            checkToken.current = true;
         }
-    }, [localStorage.getItem('token')])
+    }, [token])
     
     //로그아웃 기능
     const logoutHandler = () => {
         localStorage.removeItem('token');
-        setCheckToken(checkToken)
+        checkToken.current = false;
         navigate('/');
     }
     return <>
         <div className='header-div'>
             <h1>{title}</h1>
-            {checkToken ? <button onClick={logoutHandler}>로그아웃</button> : "" }
+            {checkToken.current ? <button onClick={logoutHandler}>로그아웃</button> : "" }
         </div>
     </>
 }
